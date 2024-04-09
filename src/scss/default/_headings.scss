@@ -1,0 +1,27 @@
+// HEADINGS
+.heading-large {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: var(--color-dark);
+}
+
+.heading-big {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 30px;
+    color: var(--color-dark);
+    transition: color .2s ease-in-out;
+}
+
+.heading-medium {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-dark);
+}
+
+
+.heading-small {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: var(--color-dark);
+}

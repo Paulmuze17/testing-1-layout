@@ -1,0 +1,14 @@
+.main-wrapper {
+    // position: inhert;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.home-page__search-bar {
+    margin-bottom: 32px;
+}
+
+.users-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}

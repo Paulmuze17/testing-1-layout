@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+@mixin font-face($font-family, $url, $weight) {
+    @font-face {
+        font-family: '#{$font-family}';
+            src: url('#{$url}.woff2') format('woff2'),
+            url('#{$url}.woff') format('woff');
+        
+        font-weight: #{$weight};
+        font-display: swap;
+        font-style: normal;
+    }
+}
+
+// USAGE EXAMPLE
+// @include font-face('NotoSans Regular', '../fonts/notosans', 600);
+
+@font-face {
+    font-family: "ProximaNova-Regular";
+    font-style: normal;
+    font-weight: normal;
+  src:  url("/assets/fonts/ProximaNova-Bold.woff2") format("woff2"),
+        url("/assets/fonts/ProximaNova-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "ProximaNova-Regular";
+    font-style: normal;
+    font-weight: bold;
+  src:  url("/assets/fonts/ProximaNova-Bold.woff2") format("woff2"),
+        url("/assets/fonts/ProximaNova-Bold.woff") format("woff");
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <main class="main-wrapper">
+    <div class="container">
+
+      <div class="home-page__search-bar search-bar-wrapper">
+        <input class="search-bar__input" type="text" name="" id="">
+        <button class="search-bar__btn"></button>
+      </div>
+
+      <div class="users-cards-wrapper">
+        <article class="user-card" data-id="1">
+          <h2 class="heading-big user-card__name">Евгения Савченко</h2>
+
+          <ul class="user-card-info-wrapper">
+            <li class="user-card-info user-card-info__phone text-smallest text-muted">+7 (918) 078-17-05</li>
+            <li class="user-card-info user-card-info__email text-smallest text-muted">yysavchenk@mail.ru</li>
+          </ul>
+        </article>
+        <article class="user-card">
+          <h2 class="heading-big user-card__name">Евгения Савченко</h2>
+
+          <ul class="user-card-info-wrapper">
+            <li class="user-card-info user-card-info__phone text-smallest text-muted">+7 (918) 078-17-05</li>
+            <li class="user-card-info user-card-info__email text-smallest text-muted">yysavchenk@mail.ru</li>
+          </ul>
+        </article>
+        <article class="user-card">
+          <h2 class="heading-big user-card__name">Евгения Савченко</h2>
+
+          <ul class="user-card-info-wrapper">
+            <li class="user-card-info user-card-info__phone text-smallest text-muted">+7 (918) 078-17-05</li>
+            <li class="user-card-info user-card-info__email text-smallest text-muted">yysavchenk@mail.ru</li>
+          </ul>
+        </article>
+        <article class="user-card">
+          <h2 class="heading-big user-card__name">Евгения Савченко</h2>
+
+          <ul class="user-card-info-wrapper">
+            <li class="user-card-info user-card-info__phone text-smallest text-muted">+7 (918) 078-17-05</li>
+            <li class="user-card-info user-card-info__email text-smallest text-muted">yysavchenk@mail.ru</li>
+          </ul>
+        </article>
+        <article class="user-card">
+          <h2 class="heading-big user-card__name">Евгения Савченко</h2>
+
+          <ul class="user-card-info-wrapper">
+            <li class="user-card-info user-card-info__phone text-smallest text-muted">+7 (918) 078-17-05</li>
+            <li class="user-card-info user-card-info__email text-smallest text-muted">yysavchenk@mail.ru</li>
+          </ul>
+        </article>
+        <article class="user-card">
+          <h2 class="heading-big user-card__name">Евгения Савченко</h2>
+
+          <ul class="user-card-info-wrapper">
+            <li class="user-card-info user-card-info__phone text-smallest text-muted">+7 (918) 078-17-05</li>
+            <li class="user-card-info user-card-info__email text-smallest text-muted">yysavchenk@mail.ru</li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div id="userPreview" class="user-card-preview-wrapper is-hidden">
+        <div class="user-card-preview">
+          <div class="user-card-preview__top-box">
+            <div class="heading-big">Евгения Савченко</div>
+            <button class="btn-close"></button>
+          </div>
+  
+          <div class="user-card-preview__middle-box" style="display: grid; grid-template-columns: 1fr 2fr;">
+  
+              <div class="text-medium">Телефон:</div>
+              <div class="user-card-preview__middle-box-text text-small text-muted">+7 (918) 078-17-05</div>
+      
+              <div class="text-medium">Почта:</div>
+              <div class="user-card-preview__middle-box-text text-small text-muted">+yysavch1@mts.ru</div>
+      
+              <div class="text-medium">Дата приема:</div>
+              <div class="user-card-preview__middle-box-text text-small text-muted">15.10.2020</div>
+      
+              <div class="text-medium">Должность:</div>
+              <div class="user-card-preview__middle-box-text text-small text-muted">Дизайнер</div>
+      
+              <div class="text-medium">Подразделение:</div>
+              <div class="user-card-preview__middle-box-text text-small text-muted">Трайб автоматизированных систем контактных центров</div>
+  
+          </div>
+
+          <div class="user-card-preview__bottom-box">
+            <div class="user-card-preview__bottom-box-heading text-medium">Дополнительная информация:</div>
+            <p class="text-small text-muted">Разработчики используют текст в качестве заполнителя макта страницы. Разработчики используют текст в качестве заполнителя макта страницы.</p>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+	//  document.addEventListener('click', (e) => {
+    //         const withinBoundaries = e.composedPath().includes(userPreview);
+        
+    //         if ( ! withinBoundaries ) {
+    //           userPreview.style.display = 'none'; // скрываем элемент т к клик был за его пределами
+    //         }
+	// 	});
+
+    document.addEventListener("DOMContentLoaded", ()=>{
+      const userPreview = document.querySelector("#userPreview");
+
+
+      if(userPreview) {
+       
+        userPreview.addEventListener("click",(e)=>{
+		    const withinBoundaries = e.composedPath()[0] ?? [];
+			if ( withinBoundaries && withinBoundaries === userPreview) {
+				userPreview.classList.add("is-hidden");
+				//   console.log(withinBoundaries)
+			}   
+        });
+
+        const btnClose = userPreview.querySelector(".btn-close");
+        btnClose.addEventListener("click",()=>{
+          userPreview.classList.add("is-hidden")
+        });
+
+      }
+
+      const usersCards =  document.querySelector(".users-cards-wrapper") ?  document.querySelector(".users-cards-wrapper").querySelectorAll(".user-card") : [];
+    
+      for (const card of usersCards) {
+        card.addEventListener("click", (e)=>{
+          if(userPreview) {
+            userPreview.classList.toggle("is-hidden");
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
